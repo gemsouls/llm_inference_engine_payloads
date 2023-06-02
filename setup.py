@@ -10,6 +10,7 @@ requirements = [
     "pydantic",
     f"openai_api_payloads@{os.path.join(DEP_DIR, 'openai_api_payloads-1.0.0-py3-none-any.whl')}"
 ]
+include_dirs = ["deps"]
 
 
 setup(
@@ -17,5 +18,6 @@ setup(
     package_dir={"": "src"},
     packages=find_packages("src"),
     version=version,
-    install_requires=requirements
+    install_requires=requirements,
+    include_dirs=include_dirs
 )
