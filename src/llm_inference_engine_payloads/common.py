@@ -8,6 +8,11 @@ class AdditionalGenerationArguments(BaseModel):
     min_tokens: int = Field(default=1)
 
 
+class ErrorBody(BaseModel):
+    error_type: str = Field(default=Required)
+    error_message: str = Field(default=Required)
+
+
 class BaseTaskInputs(BaseModel):
     task_id: str = Field(default=Required)
     api_key: Optional[str] = Field(default=None)
@@ -21,4 +26,4 @@ class BaseTaskOutputs(BaseModel):
     task_outputs: Any = Field(default=Required)
     duration: float = Field(default=Required)
     status: int = Field(default=Required)
-    error_info: Optional[Any] = Field(default=None)
+    errors: Optional[List[ErrorBody]] = Field(default=None)
