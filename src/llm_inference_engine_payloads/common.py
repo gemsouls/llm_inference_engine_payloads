@@ -20,5 +20,5 @@ class BaseTaskOutputs(BaseModel):
     task_id: str = Field(default=Required)
     task_outputs: Any = Field(default=Required)
     duration: float = Field(default=Required)
-    statu_code: int = Field(default=Required)
+    status: int = Field(default=Required)
     error_info: Optional[Any] = Field(default=None)
