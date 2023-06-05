@@ -6,7 +6,6 @@ requirements = [
     "pydantic",
     f"openai_api_payloads @ https://github.com/gemsouls/openai_api_payloads/releases/download/v1.0.0/openai_api_payloads-1.0.0-py3-none-any.whl"
 ]
-include_dirs = ["deps"]
 
 
 setup(
@@ -14,6 +13,5 @@ setup(
     package_dir={"": "src"},
     packages=find_packages("src"),
     version=version,
-    install_requires=requirements,
-    include_dirs=include_dirs
+    install_requires=requirements
 )
