@@ -6,6 +6,9 @@ from pydantic import BaseModel, Field, Required
 class AdditionalGenerationArguments(BaseModel):
     do_sample: bool = Field(default=False)
     min_tokens: int = Field(default=1)
+    max_tokens: Optional[int] = Field(default=None)
+    num_beams: Optional[int] = Field(default=None)
+    num_return_sequences: Optional[int] = Field(default=None)
 
 
 class ErrorBody(BaseModel):
