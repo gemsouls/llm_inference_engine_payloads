@@ -5,7 +5,7 @@ on: workflow_dispatch
 jobs:
   build_wheels:
     name: Build wheels
-    runs-on: windows-latest
+    runs-on: linux-latest
     strategy:
       matrix:
         pyver: ["3.9"]
