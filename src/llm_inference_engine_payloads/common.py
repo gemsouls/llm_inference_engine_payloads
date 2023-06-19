@@ -22,6 +22,8 @@ class BaseTaskInputs(BaseModel):
     org_id: Optional[str] = Field(default=None)
     task_inputs: Any = Field(default=Required)
     additional_generation_arguments: AdditionalGenerationArguments = Field(default=AdditionalGenerationArguments())
+    user_id: Optional[str] = Field(default=None)
+    adapter_id: Optional[str] = Field(default=None)
 
 
 class BaseTaskOutputs(BaseModel):
