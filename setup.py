@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = "0.2.0"
+version = "0.3.0"
 requirements = [
     "pydantic",
     "openai_api_payloads @ https://github.com/gemsouls/openai_api_payloads/releases/download/v1.0.1/openai_api_payloads-1.0.1-py3-none-any.whl"
